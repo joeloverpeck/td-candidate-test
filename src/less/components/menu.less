@@ -1,0 +1,190 @@
+
+
+.row-offcanvas {
+  margin: 0;
+  position: relative;
+  transition: all .25s ease-out;
+}
+
+.row-offcanvas-left {
+  left: 0;
+}
+
+
+.row-offcanvas-left.active {
+  left: 50%; //50
+}
+
+.row-offcanvas-left .sidebar-offcanvas {
+  left: -50%; //-50
+}
+
+.sidebar-offcanvas {
+  position: absolute;
+  top: 0;
+  width: 50%; //50
+}
+
+nav {
+    .clearfix();
+    .new-email {
+        //float: right;
+        //max-width: 55px;
+        //text-overflow: ellipsis;
+    }
+    ul {
+        //float: left;
+    }
+}
+
+
+.email-nav {
+    .clearfix();
+    padding: 0;
+
+    list-style: none;
+    li {
+        //padding-right: 3px;
+        //display: inline-block;
+        &:last-child {
+            //padding-right: 0;
+        }
+    }
+    li.active > a {
+        background: @menu-selection-color;
+        text-decoration: none;
+    }
+    .new-email {
+        display: inline-block;
+    }
+
+}
+
+.email-nav li:first-child > a {
+    position: relative;
+}
+.unread-count {
+    background: @primary-color;
+    border-radius: 11px;
+    position: absolute;
+    padding: 2px 7px;
+    right: 0;
+    color: white;
+    font-size: .8rem;
+    font-weight: 700;
+    margin-right: 11px;
+/*     position: absolute;
+top: -8px;
+right: -4px; */
+}
+
+.new-email,
+.email-nav > li > a {
+    position: relative;
+    display: block;
+    border-radius: 4px;
+}
+
+.email-nav a {
+    padding: 11px 16px;
+}
+
+.email-nav .new-email {
+    text-align: center;
+    color: white;
+    margin: 22px auto;
+    display: block;
+    padding: 8px 12px;
+    max-width: 150px;
+    font-weight: 700;
+}
+
+.email-nav li > a {
+    //padding: 10px;
+    color: #626262;
+}
+
+.row-offcanvas.active .email-nav {
+    height: 1000px;
+}
+
+.email-nav {
+    //background: darken(@bg-color, 5%);
+    border-right: 4px solid @nav-border-color;
+    height: auto;
+
+}
+
+.menu ul > li,
+.new-email {
+    font-size: .9rem;
+}
+
+
+.menu,
+.email-viewer {
+    padding: 0;
+}
+
+
+//.row-offcanvas.active
+
+
+@media (min-width: @screen-sm-min) {
+
+    .email-info {
+        float: right;
+        > ul,
+        > div {
+            width: auto;
+            display: block;
+            float: none;
+            text-align: center;
+        }
+    }
+
+    .user .name {
+        font-size: 1rem;
+    }
+
+    .primary-header {
+        float: none;
+    }
+
+    .email-nav {
+
+        min-height: 1100px;
+        padding: 2px 4% 0 4%;
+    }
+
+
+    .btn-menu {
+        display: none;
+    }
+
+
+    .row-offcanvas {
+      margin: auto;
+      position: relative;
+
+    }
+
+    .row-offcanvas-left {
+      left: auto;
+    }
+
+
+    .row-offcanvas-left.active {
+      left: auto;
+    }
+
+    .row-offcanvas-left .sidebar-offcanvas {
+      left: auto;
+    }
+
+    .sidebar-offcanvas {
+      position: relative;
+      top: 0;
+    }
+
+ }

@@ -11,76 +11,154 @@
 
 		<!-- Component styles -->
 		<!-- build:css all.min.css -->
-		<link rel="stylesheet" href=".tmp/all.css"/>
+		<link rel="stylesheet" href=".tmp/prefixed.css"/>
 		<!-- endbuild -->
 	</head>
 	<body role="document">
-		<div class="container">
-			<div class="menu">
-				<header>
-					<div class="user">
-						<img src="" alt="user-image">
-						<div class="name">
-							<span class="first-name">Michael</span>
-							<span class="last-name">Holmes</span>
-						</div>
-					</div>
-				</header>
-				<nav>
-					<button><i class="fa fa-edit"></i>New Email</button>
-					<ul>
-						<li>
-							<a href="#">Inbox</a>
-						</li>
-						<li>
-							<a href="#">Sent</a>
-						</li>
-						<li>
-							<a href="#">Flagged</a>
-						</li>
-						<li>
-							<a href="#">Deleted</a>
-						</li>
-					</ul>
-				</nav>
-			</div> <!-- end menu -->
-			<div class="email-viewer">
-				<header>
-					<h1>Inbox</h1>
-				</header>
+		<div class="wrapper">
+		<!-- <div class="container"> -->
 
-				<ul class="emails">
-					<li class="email">
-						<header class="email-header">
-							<div class="media-object">
-								<img src="" alt="Profile Picture" class="profile-pic">
-								<div class="name">Danielle Carter</div>
-								<a class="email-address" href="mailto:danielle.carter@email.com">danielle.carter@email.com</a>
+
+			<div class="row row-offcanvas row-offcanvas-left container">
+
+				<div class="menu sidebar-offcanvas" id="sidebar">
+					<nav>
+
+						<header class="nav-header">
+							<div class="user">
+								<img class="user-profile-pic" src="images/profile-2.png" alt="user-image">
+								<div class="name">
+									<span class="first-name">Michael</span>
+									<span class="last-name">Holmes</span>
+								</div>
 							</div>
-
-							<div class="email-info">
-								<span class="date-received">09/18/2015</span>
-								<ul>
-									<li class="tag tag-internal">internal</li>
-								</ul>
-							</div>
-
 						</header>
-						<div class="email-body">
-							<p>Hello! <br> At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
-voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo.</p>
-						</div>
-						<button><i class="fa fa-reply icon-left"></i>Reply</button>
-					</li>
-				</ul>
 
-			</div>
+						<ul class="email-nav" role="tablist">
+							<li>
+								<a class="new-email"><i class="glyphicon glyphicon-pencil icon-left-big"></i>New <span>Email</span></a>
+							</li>
+							<li class="active"  role="presentation">
+								<a href="#inbox" data-toggle="tab" role="tab">Inbox<span class="unread-count">42</span></a>
+							</li>
+							<li role="presentation">
+								<a href="#sent" data-toggle="tab" role="tab">Sent</a>
+							</li>
+							<li role="presentation">
+								<a href="#flagged" data-toggle="tab" role="tab">Flagged</a>
+							</li>
+							<li role="presentation">
+								<a href="#deleted" data-toggle="tab" role="tab">Deleted</a>
+							</li>
+						</ul>
+					</nav>
+				</div> <!-- end menu -->
 
 
+
+
+
+			<div class="email-viewer">
+				<header class="primary-header navbar-header">
+					<div class="inner-header">
+						<button type="button" class="my-btn btn-menu" data-toggle="offcanvas"><i class="glyphicon glyphicon-menu-hamburger icon-left"></i>Menu</button>
+
+						<h1 class="title">Inbox</h1>
+
+					</div> <!-- end inner-header -->
+				</header>
+				<div class="content tab-content">
+					<ul class="emails tab-pane active" role="tab-pane" id="inbox">
+						<!-- begin email -->
+						<li class="email">
+
+							<div class="row">
+
+								<div class="col-sm-1">
+									<img class="email-profile-pic" src="images/profile-1.png" alt="email-image">
+								</div>
+								<div class="col-sm-11">
+										<div class="email-info row">
+											<div class="col-xs-4">
+												<span class="date-received">09/18/2015</span>
+											</div>
+											<ul class="col-xs-4">
+												<li class="label label-success">internal</li>
+											</ul>
+										</div>
+										<div class="media-object">
+
+
+
+											<div class="email-name">
+												<div class="name">Danielle Carter</div>
+												<a class="email-address" href="mailto:danielle.carter@email.com">danielle.carter@email.com</a>
+											</div>
+										</div>
+
+
+								</div>
+							</div>
+
+
+							<div class="email-body row">
+								<p class="col-sm-10 col-sm-offset-1">Hello!</p>
+								<p class="col-sm-10 col-sm-offset-1">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+	voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo.</p>
+							</div>
+
+
+							<div class="reply row animate fadeInDown hidden">
+								<hr>
+								<div class="col-sm-1 col-xs-2">
+									<img class="email-profile-pic smaller-profile" src="images/profile-2.png" alt="email-image">
+								</div>
+								<div class="col-sm-11 col-xs-10">
+									<textarea name="email-reply" placeholder="Reply" id="" cols="30" rows="10"></textarea>
+								</div>
+							</div>
+							<button class="btn-reply btn btn-default pull-right"><i class="glyphicon glyphicon-share-alt icon-left-big"></i>Reply</button>
+							<button class="btn-send btn btn-primary pull-right animate fadeIn hidden" data-toggle="modal" data-target="#myModal"><i class="glyphicon glyphicon-arrow-right icon-left-big"></i>Send</button>
+
+
+
+						</li>
+
+					</ul>
+					<div class="tab-pane" id="sent" role="tab-pane">Sent</div>
+					<div class="tab-pane" id="flagged" role="tab-pane">Flagged</div>
+					<div class="tab-pane" id="deleted" role="tab-pane">Deleted</div>
+				</div> <!-- end content -->
+
+			</div> <!-- end email-viewer -->
+
+		</div> <!-- end row offcanvas-->
 
 		</div> <!-- end container -->
 
+		<div class="modal progress-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="myModal">
+		  <div class="modal-dialog">
+		    <div class="modal-content animate fadeIn">
+				<h3 class="sending">Sending...</h3>
+				<div class="progress">
+					<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+						<span class="sr-only">0% Complete</span>
+					</div>
+				</div>
+		    </div>
+		  </div>
+		</div>
 
+		<div class="modal confirm-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="finished">
+		  <div class="modal-dialog">
+		    <div class="modal-content  animate fadeIn">
+				<i class="glyphicon glyphicon-ok-sign"></i>
+				 <h3 class="confirmation-messge">Message Sent</h3>
+				<p>Some details. Nulla vitae elit libero, pharetra augue. Aenean lacinia bibendum nulla consectetur.</p>
+				<button class="btn btn-primary btn-lg" data-dismiss="modal">Done</button>
+		    </div>
+		  </div>
+		</div>
 		<!-- Library scripts -->
 		<script src="libraries/jquery/dist/jquery.js"></script>
 		<script src="libraries/bootstrap/dist/js/bootstrap.js"></script>

@@ -1,0 +1,47 @@
+
+// Basic Layout Rules
+
+.container {
+    padding: 0;
+}
+
+.wrapper {
+
+    padding: 0;
+}
+
+
+
+
+.content {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    padding-left: 7%;
+    padding-right: 7%;
+}
+
+
+ .menu {
+    .make-sm-column(3; @gutter: @grid-gutter-width);
+    //padding: 0;
+}
+
+.email-viewer {
+    .make-sm-column(9; @gutter: @grid-gutter-width)
+}
+
+@media (min-width: @screen-sm-min) {
+
+    .content {
+        padding-left: 4%;
+        padding-right: 4$;
+    }
+
+    .menu {
+        //.make-sm-column(3; @gutter: @grid-gutter-width);
+        padding: 0;
+    }
+
+
+
+}

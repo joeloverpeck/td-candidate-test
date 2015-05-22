@@ -16,6 +16,7 @@
   "license": "Copyright 2015 Teradata",
   "devDependencies": {
     "grunt": "0.4.4",
+    "grunt-autoprefixer": "^3.0.0",
     "grunt-bump": "0.0.13",
     "grunt-contrib-clean": "0.5.0",
     "grunt-contrib-concat": "0.4.0",

@@ -58,12 +58,21 @@ module.exports = function (grunt) {
 				}
 			}
 		},
+		autoprefixer: {
+			options: {
+				browsers: ['last 2 versions', 'ie 9']
+			},
+			single_file: {
+			      src: 'src/.tmp/all.css',
+				  dest: 'src/.tmp/prefixed.css'
+			},
+		},
 		watch: {
 			less: {
 				files: ['src/**/*.less'].concat(options.ignorePatterns),
-				tasks: ['less'],
+				tasks: ['less', 'autoprefixer'],
 				options: {
-					livereload: false
+					livereload: true
 				}
 			},
 			css: {
@@ -153,8 +162,8 @@ module.exports = function (grunt) {
 
 	// General
 	grunt.registerTask('default', ['serve']);
-	grunt.registerTask('serve', ['less', 'connect', 'open:src', 'watch']);
-	grunt.registerTask('compile', ['clean:dist', 'copy', 'useminPrepare', 'less', 'concat', 'cssmin', 'uglify', 'usemin']);
+	grunt.registerTask('serve', ['less', 'autoprefixer', 'connect', 'open:src', 'watch']);
+	grunt.registerTask('compile', ['clean:dist', 'copy', 'useminPrepare', 'less', 'autoprefixer', 'concat', 'cssmin', 'uglify', 'usemin']);
 	grunt.registerTask('build', ['test', 'compile']);
 
 	// Testing
