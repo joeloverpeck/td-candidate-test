@@ -1,0 +1,83 @@
+//-------------------------------------------------------
+// BASE TYPOGRAPHY
+//=======
+// 	- Set Type Styles
+//--------------------------------------------------------
+
+/* Typography */
+
+html {
+	
+	@extend %base-size;
+	@include sans($reg);
+	color: $type-light;
+}
+
+header {
+	@include slab($reg);
+	.breadcrums {
+		@include sans($reg);
+	}
+}
+
+body {
+    @include sans($reg);
+    @include font-size(1.1); //17.6px
+	line-height: 1.4;
+}
+
+// paragraph defaults
+p {
+	line-height: 1.5;
+	hyphens: auto;
+}
+
+%headline {
+	@include sans($condbold);
+	text-transform: capitalize;
+	letter-spacing: -2px;
+	line-height: 1;
+
+	//word-spacing: $quarter-spacing-unit;
+}
+
+h1 {
+	&.headline{
+		@extend %headline;
+
+	}
+	@include font-size(3.2);
+	color: $type-color;
+}
+
+h2 {
+	@include font-size(1.5);
+	@include sans($bold);
+	letter-spacing: -1px;
+	margin: 0;
+}
+
+h3 {
+	@include sans($cond);
+	@include font-size(1.2);
+	text-transform: uppercase;
+	letter-spacing: 0px;
+	word-spacing: 4px;
+}
+
+.portlet h3 {
+	@include sans($cond);
+	@include font-size(1.5);
+	line-height: 1.5;
+}
+
+h4 {
+	@include sans($italic);
+	margin-bottom: 6px;
+	padding-bottom: 2px;
+	border-bottom: 1px solid lighten($border, 6%);
+}
+
+h5 {
+	@include font-size(.85);
+}

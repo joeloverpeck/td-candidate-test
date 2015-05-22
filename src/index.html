@@ -3,8 +3,8 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-		<title>td-candidate-test</title>
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title>Email Viewer</title>
 
 		<!-- Library styles -->
 		<link rel="stylesheet" href="libraries/bootstrap/dist/css/bootstrap.css"/>
@@ -16,11 +16,69 @@
 	</head>
 	<body role="document">
 		<div class="container">
-			<div class="starter-template" style="padding: 40px 15px; text-align: center;">
-				<h1>Starter Template</h1>
-				<p class="lead">Replace this <code>.starter-template</code> div with your new custom component.</p>
+			<div class="menu">
+				<header>
+					<div class="user">
+						<img src="" alt="user-image">
+						<div class="name">
+							<span class="first-name">Michael</span>
+							<span class="last-name">Holmes</span>
+						</div>
+					</div>
+				</header>
+				<nav>
+					<button><i class="fa fa-edit"></i>New Email</button>
+					<ul>
+						<li>
+							<a href="#">Inbox</a>
+						</li>
+						<li>
+							<a href="#">Sent</a>
+						</li>
+						<li>
+							<a href="#">Flagged</a>
+						</li>
+						<li>
+							<a href="#">Deleted</a>
+						</li>
+					</ul>
+				</nav>
+			</div> <!-- end menu -->
+			<div class="email-viewer">
+				<header>
+					<h1>Inbox</h1>
+				</header>
+
+				<ul class="emails">
+					<li class="email">
+						<header class="email-header">
+							<div class="media-object">
+								<img src="" alt="Profile Picture" class="profile-pic">
+								<div class="name">Danielle Carter</div>
+								<a class="email-address" href="mailto:danielle.carter@email.com">danielle.carter@email.com</a>
+							</div>
+
+							<div class="email-info">
+								<span class="date-received">09/18/2015</span>
+								<ul>
+									<li class="tag tag-internal">internal</li>
+								</ul>
+							</div>
+
+						</header>
+						<div class="email-body">
+							<p>Hello! <br> At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo.</p>
+						</div>
+						<button><i class="fa fa-reply icon-left"></i>Reply</button>
+					</li>
+				</ul>
+
 			</div>
-		</div>
+
+
+
+		</div> <!-- end container -->
 
 
 		<!-- Library scripts -->

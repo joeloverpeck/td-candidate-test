@@ -1,0 +1,44 @@
+//-------------------------------------------------------
+// BASE
+//=======
+//  - Default Styling for body & html
+//--------------------------------------------------------
+//@import "patterns/full-height";
+//@include full-height(".l-container", 90px);
+
+/* Base */
+
+%base-size {
+	//font-size: $base-size;  // All rem  units will use this value.  Scale of site will be affected if this is changed.
+	//line-height: $base-line-height;
+}
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+	background: #eee !important;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	margin: 0;
+	overflow-x: hidden;
+}
+
+.page-wrap {
+    background: white;
+    overflow-x: hidden;
+}
+
+::selection {
+  background: #F9CC8D;
+  //color: black;//darken(\\$heading-text, 14%);
+}
+::-moz-selection {
+  background: #F9CC8D;
+  //color: black;//darken(\\$heading-text, 14%);
+}
