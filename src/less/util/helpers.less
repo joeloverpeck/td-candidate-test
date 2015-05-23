@@ -51,7 +51,13 @@
   }
 }
 
+.generate-sm-column(@columns; @gutter: @grid-gutter-width) {
 
+    @media (min-width: @screen-sm-min) {
+     float: left;
+     width: percentage((@columns / @grid-columns));
+    }
+}
 
 
 

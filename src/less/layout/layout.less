@@ -20,14 +20,14 @@
     padding-right: 7%;
 }
 
-
+// swiped these mixins from the less grid mixins (see helpers.less).  Altered them to only focus on media queries.
  .menu {
-    .make-sm-column(3; @gutter: @grid-gutter-width);
+     .generate-sm-column(3; @gutter: @grid-gutter-width);
     //padding: 0;
 }
 
 .email-viewer {
-    .make-sm-column(9; @gutter: @grid-gutter-width)
+    .generate-sm-column(9; @gutter: @grid-gutter-width)
 }
 
 @media (min-width: @screen-sm-min) {
